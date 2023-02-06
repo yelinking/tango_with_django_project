@@ -1,0 +1,31 @@
+
+<ul>
+    {% if categories %}
+        {% for c in categories %}
+            <!-- check to see if category passed from the for loop is the same as the category displayed -->
+            {% if c == current_category %}
+            <li>
+                <strong>
+                <a href="{% url 'rango:show_category' c.slug %}">{{ c.name }}</a>
+                </strong>
+            </li>
+
+            {% else %}
+            <li>
+                <a href="{% url 'rango:show_category' c.slug %}">{{ c.name }}</a>
+            </li>
+
+            {% endif %}
+        {% endfor %}
+
+    {% else %}
+    <li><strong>There are no categories present.</strong></li>
+    {% endif %}
+</ul>
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
