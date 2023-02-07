@@ -27,7 +27,8 @@ SECRET_KEY = 'b#mrn7+5$t14b0p@3z_i#9y6o=(7--fyl@_=xif*$rxl7!rpds'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+# redirect users to this page if they are not logged in and want to access a restricted page
+LOGIN_URL = 'rango:login' 
 ALLOWED_HOSTS = []
 
 
